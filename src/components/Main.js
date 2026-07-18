@@ -50,30 +50,30 @@ function Main() {
     `)
     },
     
-    created(state){
+    created(state) {
       birthdaySong = new Audio("./src/assets/hbd_song.mp3")
       
       birthdaySong.loop = true
       
       this.animateConfetti = () => {
-       state.actionClass = 'out'
-       state.hbdClass = 'bounce'
-       animateConfetti()
-       birthdaySong.play()
-     }
-     
-     this.alt = () => {
-       state.actionClass = 'out',
-       alert("Thought you could escape?")
-       state.hbdClass = 'bounce'
-       animateConfetti()
-       birthdaySong.play()
-     }
-     
+        state.actionClass = 'out'
+        state.hbdClass = 'bounce'
+        animateConfetti()
+        birthdaySong.play()
+      }
+      
+      this.alt = () => {
+        state.actionClass = 'out',
+          alert("Thought you could escape?")
+        state.hbdClass = 'bounce'
+        animateConfetti()
+        birthdaySong.play()
+      }
+      
     },
     
-    run(state){
-     setTimeout(() => state.actionClass = 'showBtns', 30000)
+    run(state) {
+      setTimeout(() => state.actionClass = 'showBtns', 30000)
     },
     
     stylesheet: {
@@ -89,7 +89,7 @@ function Main() {
         0% { transform: translateY(0vh); }
         100% { transform: translateY(-5vh); }
     `,
-    
+      
       '.hbd span': `
         background-image: linear-gradient(90deg, #ffcc00, #FFBC25, #AE830D);
         background-size: 300% 100%;
@@ -98,11 +98,11 @@ function Main() {
         color: transparent;
         animation: shimmer 3s linear infinite;
       `,
-    '@keyframes shimmer': `
+      '@keyframes shimmer': `
       0% { background-position: 0% 50%; }
       100% { background-position: 300% 50%; }
     `,
- 
+      
       '.bounce': `
         transform: scale(1);
       `,

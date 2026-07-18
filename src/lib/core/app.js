@@ -110,12 +110,12 @@ class App {
     ctx.currentComponent?.navigateFunc(ctx.currentComponent.state);
     
     if (!this.#addedToReactiveCache) {
-      addToReactiveCache(this.#element);
+      addToReactiveCache(this.#element);  
       this.#addedToReactiveCache = true;
     }
     
     setupEventDelegation(this.#element, this);
- 
+    
     for (const component of components) {
       const instance = component[1];
       if (instance.type === "Atom") continue;
