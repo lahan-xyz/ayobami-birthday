@@ -73,7 +73,7 @@ function Main() {
     },
     
     run(state) {
-      setTimeout(() => state.actionClass = 'showBtns', 30000)
+      setTimeout(() => state.actionClass = 'showBtns', 18900)
     },
     
     stylesheet: {

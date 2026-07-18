@@ -82,7 +82,7 @@ function SlidingText() {
           state[entryKey].msg = text.slice(0, charIndex);
           charIndex++;
           typeText();
-        }, 120);
+        }, 60);
       };
       
       animateText = function() {
